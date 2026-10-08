@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFOP Cross Trainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CFOP Cross Trainer</h1>
+        <p class="subtitle">Practice finding the shortest cross (&le; 8 moves)</p>
+
+        <div class="controls">
+            <button id="newScrambleBtn">New Scramble</button>
+            <button id="showSolutionBtn" disabled>Show Optimal Cross</button>
+            <button id="prevMoveBtn" disabled>&larr; Previous</button>
+            <button id="nextMoveBtn" disabled>Next &rarr;</button>
+            <button id="resetViewBtn" disabled>Reset</button>
+            <label class="mode"><input type="checkbox" id="mode3d" checked> 3D cube</label>
+        </div>
+
+        <div class="info">
+            <div><strong>Scramble:</strong> <span id="scrambleText">-</span></div>
+            <div class="custom-row">
+                <input type="text" id="customScramble" placeholder="or type your own scramble: R U R' F2 ...">
+                <button id="applyScrambleBtn">Apply scramble</button>
+            </div>
+            <div class="hint"><strong>How to apply:</strong> hold the cube with <b>white facing DOWN, green facing YOU</b> (red left, orange right, yellow up, blue back). Do the moves as written: a letter = turn that face clockwise as you look at it, <code>'</code> = counterclockwise, <code>2</code> = half turn. Keep the same orientation all the time.</div>
+            <div><strong>Optimal Cross:</strong> <span id="solutionText">-</span></div>
+            <div><strong>Move:</strong> <span id="moveCounter">0 / 0</span></div>
+        </div>
+
+        <div class="main">
+            <div class="visual">
+                <h2>Scrambled</h2>
+                <div class="scene"><div class="cube" id="cube1"></div></div>
+                <p class="hint">Goal: Form the white cross on the bottom face (D), with each edge matching its adjacent side center.</p>
+            </div>
+            <div class="visual">
+                <h2>After current move</h2>
+                <div class="scene"><div class="cube" id="cube2"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="cross.js"></script>
+</body>
+</html>
