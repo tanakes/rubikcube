@@ -172,6 +172,26 @@ button:disabled {
     transform: scale(0.72);
 }
 
+.paint-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.sw {
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border-radius: 6px;
+    border: 2px solid #334155;
+}
+
+.sw.sel {
+    border-color: #e2e8f0;
+    box-shadow: 0 0 0 2px rgba(226, 232, 240, 0.35);
+}
+
 .hint {
     color: #64748b;
     font-size: 13px;

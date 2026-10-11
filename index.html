@@ -26,6 +26,16 @@
                 <input type="text" id="customScramble" placeholder="or type your own scramble: R U R' F2 ...">
                 <button id="applyScrambleBtn">Apply scramble</button>
             </div>
+            <div class="paint-row">
+                <span><strong>Paint:</strong></span>
+                <button class="sw sel" data-color="W" title="white"></button>
+                <button class="sw" data-color="Y" title="yellow"></button>
+                <button class="sw" data-color="G" title="green"></button>
+                <button class="sw" data-color="B" title="blue"></button>
+                <button class="sw" data-color="R" title="red"></button>
+                <button class="sw" data-color="O" title="orange"></button>
+                <span class="hint">pick a color, click stickers on the left cube (dragging still rotates in 3D)</span>
+            </div>
             <div class="hint"><strong>How to apply:</strong> hold the cube with <b>white facing DOWN, green facing YOU</b> (red left, orange right, yellow up, blue back). Do the moves as written: a letter = turn that face clockwise as you look at it, <code>'</code> = counterclockwise, <code>2</code> = half turn. Keep the same orientation all the time.</div>
             <div><strong>Optimal Cross:</strong> <span id="solutionText">-</span></div>
             <div><strong>Move:</strong> <span id="moveCounter">0 / 0</span></div>
