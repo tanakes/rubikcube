@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CFOP Cross Trainer</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
     <div class="container">
@@ -19,10 +19,12 @@
             <button id="nextMoveBtn" disabled>Next &rarr;</button>
             <button id="resetViewBtn" disabled>Reset</button>
             <label class="mode"><input type="checkbox" id="mode3d" checked> 3D cube</label>
+            <label class="mode"><input type="checkbox" id="showTurns"> Turn buttons</label>
         </div>
 
         <div class="info">
             <div><strong>Scramble:</strong> <span id="scrambleText">-</span></div>
+            <div><strong>Setup from solved:</strong> <span id="setupText">-</span></div>
             <div class="custom-row">
                 <input type="text" id="customScramble" placeholder="or type your own scramble: R U R' F2 ...">
                 <button id="applyScrambleBtn">Apply scramble</button>
@@ -37,7 +39,7 @@
                 <button class="sw" data-color="O" title="orange"></button>
                 <span class="hint">click a sticker to paint it &bull; drag a sticker to turn its layer &bull; drag the background to rotate the view (3D only)</span>
             </div>
-            <div class="turn-row">
+            <div class="turn-row off" id="turnRowWrap">
                 <span><strong>Turn:</strong></span>
                 <span id="turnRow" class="turn-grid"></span>
                 <span class="hint">click or drag on the left cube: drag a sticker and its layer turns with your finger (drops into place after a third of a turn, middle layers included); <code>U D F B L R</code> = clockwise, <code>'</code> = counterclockwise, <code>2</code> = half turn</span>
@@ -60,6 +62,6 @@
         </div>
     </div>
 
-    <script src="cross.js?v=3"></script>
+    <script src="cross.js?v=4"></script>
 </body>
 </html>

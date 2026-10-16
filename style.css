@@ -199,6 +199,10 @@ button:disabled {
     flex-wrap: wrap;
 }
 
+.turn-row.off {
+    display: none;
+}
+
 .turn-row .hint {
     flex-basis: 100%;
 }

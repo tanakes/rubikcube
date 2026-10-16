@@ -50,5 +50,11 @@ var bad=0,maxlen=0,i,t;
 for(t=0;t<30;t++){var s=getScramble(25),bc=applySequence(newCube(),s),sol=findCross(bc,8);if(!sol){bad++;console.log('no solution: '+s.join(' '));continue;}if(!crossSolved(applySequence(bc,sol))){bad++;console.log('wrong solution: '+s.join(' '));}if(sol.length>maxlen)maxlen=sol.length;}
 ok(bad===0,'30 random scrambles solved, worst length '+maxlen);
 
+historyMoves=[];historyCustom=false;setupText={textContent:''};
+updateSetup();ok(setupText.textContent==='(solved)','setup: solved shown as (solved)');
+historyMoves=['R','U'];updateSetup();ok(setupText.textContent==='R U','setup: move history shown');
+historyCustom=true;updateSetup();ok(setupText.textContent.indexOf('custom')>=0,'setup: painted colors flagged not-a-sequence');
+var sq=['R',"U'",'F2'],bc2=applySequence(newCube(),sq),hm=sq.slice();hm.push('D');bc2=applyMove(bc2,'D');ok(JSON.stringify(applySequence(newCube(),hm))===JSON.stringify(bc2),'setup: replaying history reproduces the position');
+
 console.log(fails?fails+' FAILURES':'ALL TESTS PASSED');
 process.exit(fails?1:0);
