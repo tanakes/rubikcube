@@ -27,6 +27,9 @@ function invOf(m){return m.length===1?m+"'":(m[1]==="'"?m[0]:m);}
 var scr=getScramble(30);
 eq(applySequence(applySequence(newCube(),scr),scr.slice().reverse().map(invOf)),newCube(),'scramble + inverse = solved');
 
+var mx=newCube(),_i;for(_i=0;_i<4;_i++)mx=applyMove(mx,'M');eq(mx,newCube(),'M x4 = solved (slice moves apply)');
+ok(applyMove(newCube(),'M').F[4]!==newCube().F[4],'M turns a center -> slice notation needs to be accepted');
+
 ok(crossSolved(applyMove(newCube(),'U'))===true,'U preserves cross');
 ok(crossSolved(applyMove(newCube(),'F'))===false,'F breaks cross');
 var t1=newCube();t1.D[1]='Y';ok(crossSolved(t1)===false,'D edge checked');
