@@ -13,6 +13,7 @@
 
         <div class="controls">
             <button id="newScrambleBtn">New Scramble</button>
+            <button id="histBackBtn" disabled title="back to the previous scramble">&larr; Prev scramble</button>
             <button id="showSolutionBtn" disabled>Show Optimal Cross</button>
             <button id="prevMoveBtn" disabled>&larr; Previous</button>
             <button id="nextMoveBtn" disabled>Next &rarr;</button>
@@ -35,6 +36,11 @@
                 <button class="sw" data-color="R" title="red"></button>
                 <button class="sw" data-color="O" title="orange"></button>
                 <span class="hint">pick a color, click stickers on the left cube (dragging still rotates in 3D)</span>
+            </div>
+            <div class="turn-row">
+                <span><strong>Turn:</strong></span>
+                <span id="turnRow" class="turn-grid"></span>
+                <span class="hint">click to turn the left cube: <code>U D F B L R</code> = clockwise, <code>'</code> = counterclockwise, <code>2</code> = half turn (no real cube needed)</span>
             </div>
             <div class="hint"><strong>How to apply:</strong> hold the cube with <b>white facing DOWN, green facing YOU</b> (red left, orange right, yellow up, blue back). Do the moves as written: a letter = turn that face clockwise as you look at it, <code>'</code> = counterclockwise, <code>2</code> = half turn. Keep the same orientation all the time.</div>
             <div><strong>Optimal Cross:</strong> <span id="solutionText">-</span></div>

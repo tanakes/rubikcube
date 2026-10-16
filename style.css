@@ -192,6 +192,48 @@ button:disabled {
     box-shadow: 0 0 0 2px rgba(226, 232, 240, 0.35);
 }
 
+.turn-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.turn-row .hint {
+    flex-basis: 100%;
+}
+
+.turn-grid {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.tn {
+    min-width: 46px;
+    padding: 8px 10px;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 12px;
+    }
+
+    .sw {
+        width: 34px;
+        height: 34px;
+    }
+
+    .tn {
+        min-width: 54px;
+        padding: 10px;
+    }
+
+    .controls button {
+        padding: 11px 14px;
+    }
+}
+
 .hint {
     color: #64748b;
     font-size: 13px;
